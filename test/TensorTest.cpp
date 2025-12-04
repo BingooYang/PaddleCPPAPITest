@@ -170,5 +170,20 @@ TEST_F(TensorTest, Transpose) {
   EXPECT_EQ(transposed.sizes()[2], 2);
 }
 
+// 测试 toBackend
+// TEST_F(TensorTest, ToBackend) {
+//   // 当前 tensor 已经在 CPU 上，测试转换到 CPU Backend
+//   at::Tensor cpu_tensor = tensor.toBackend(at::Backend::CPU);
+//   EXPECT_TRUE(cpu_tensor.is_cpu());
+//   EXPECT_EQ(cpu_tensor.device().type(), c10::DeviceType::CPU);
+// }
+
+// // 测试 cpu
+// TEST_F(TensorTest, Cpu) {
+//   at::Tensor cpu_tensor = tensor.cpu();
+//   EXPECT_TRUE(cpu_tensor.is_cpu());
+//   EXPECT_EQ(cpu_tensor.device().type(), c10::DeviceType::CPU);
+// }
+
 }  // namespace test
 }  // namespace at

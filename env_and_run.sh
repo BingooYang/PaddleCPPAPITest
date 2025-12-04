@@ -53,6 +53,7 @@ export CXX=/usr/bin/g++
 echo 'Downloading dependencies...'
 mkdir -p /tmp/pacakage
 cd /tmp/pacakage
+# 建议自己编包或者使用paddle官网的nightly包（https://www.paddlepaddle.org.cn/packages/nightly/cu129/paddlepaddle-gpu/）
 wget -q --show-progress https://paddle-qa.bj.bcebos.com/paddle-pipeline/Develop-GpuAll-LinuxCentos-Gcc11-Cuda126-Cudnn95-Trt105-Py310-Compile/f1b4e1d116dfe857b36e194db649b791f42cf684/paddlepaddle_gpu-3.3.0.dev20251202-cp310-cp310-linux_x86_64.whl
 wget -q --show-progress https://xly-devops.bj.bcebos.com/PaddleCPPApiTest/libtorch-shared-with-deps-2.9.1%2Bcu126.zip
 
