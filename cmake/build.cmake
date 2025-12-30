@@ -21,7 +21,7 @@ function(
     target_compile_definitions(${_test_name}
                                PRIVATE USE_PADDLE_API=${USE_PADDLE_API})
     message(STATUS "USE_PADDLE_API: ${USE_PADDLE_API}")
-    add_test(${_test_name} ${_test_name})
+    add_test(NAME ${_test_name} COMMAND ${_test_name})
     set_tests_properties(${_test_name} PROPERTIES TIMEOUT 5)
     set_target_properties(${_test_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
                                                    "${TARGET_FOLDER}")
