@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_compile_definitions(_GLIBCXX_USE_CXX11_ABI=1)
 
-if($ENV{ENABLE_COVERAGE})
+option(ENABLE_COVERAGE "Enable converage detection" OFF)
+if(ENABLE_COVERAGE)
   message(
     STATUS "Coverage build enabled via ENABLE_COVERAGE environment variable.")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
